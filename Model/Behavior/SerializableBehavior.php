@@ -50,7 +50,7 @@ class SerializableBehavior extends ModelBehavior {
 		'unique' => true,
 	);
 
-	function setup(Model $model, $config = array()) {
+	public function setup(Model $model, $config = array()) {
 		if (!isset($this->settings[$model->alias])) {
 			$this->settings[$model->alias] = $this->_defaults;
 		}
