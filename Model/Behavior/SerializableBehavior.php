@@ -144,9 +144,6 @@ class SerializableBehavior extends ModelBehavior {
 			if (!empty($data[$Model->alias][$field])) {
 				if (is_string($data[$Model->alias][$field])) {
 					$data[$Model->alias][$field] = $this->__unserialize($data[$Model->alias][$field], $this->settings[$Model->alias]);
-					if ($data[$Model->alias][$field] === false) {
-						$data[$Model->alias][$field] = array();
-					}
 				}
 			} elseif (array_key_exists($field, $data[$Model->alias])) {
 				$data[$Model->alias][$field] = array();
